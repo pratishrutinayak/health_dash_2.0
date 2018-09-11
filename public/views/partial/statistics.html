@@ -1,0 +1,318 @@
+<div class="jumbotron jumbotron-fluid" style="height:-webkit-fill-available" ng-show="welcomeVisible">
+    <div class="container" style="text-align: center;">
+        <h1 class="display-4">Welcome to Herbeat App</h1>
+        <hr class="my-4">
+        <p class="lead">Get started by selecting a patient ID above.</p>
+  </div>
+</div>
+<div id="stat-data" ng-show="statVisible">
+    <!--Added by Bharath-->
+    
+    <div class="card mb-3" ng-controller="messageCtrl">
+        <div class="card-header">
+          <i class="fa fa-table"></i> FeedBack Message</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                   <th>Date</th>
+                  <th>Time</th>
+                  <th>Message</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="rec in pagedRecords[currentPage]">
+                   <td>{{rec.activity_date}}</td>
+                   <td>{{rec.activity_time}}</td>
+                  <td>{{rec.message}}</td>
+                </tr>
+              </tbody>
+            </table>
+              <nav class="pagination pull-right">
+                  <ul class="pagination pagination-sm flex-sm-wrap" style="margin-bottom: 0px">
+                    <li ng-class="{disabled: currentPage == 0}" class="page-item">
+                        <a href ng-click="prevPage()" class="page-link">« Prev</a>
+                    </li>
+
+                    <li ng-repeat="n in range(message.length, itemsPerPage) "
+                        ng-class="{active: n == currentPage}" class="page-item"
+                    ng-click="setPage()">
+                        <a href ng-bind="n + 1" class="page-link">1</a>
+                    </li>
+
+                    <li ng-class="{disabled: (currentPage) == Math.floor(records.length/itemsPerPage) + 1}" class="page-item">
+                        <a href ng-click="nextPage()" class="page-link">Next »</a>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+        <!--<div class="card-footer small text-muted">
+            <div class="card-deck">
+                <div class="input-group date" id="stMsgDateId" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" id="stMsgDateId" placeholder="Start Date" ng-model="stMsgDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-group date" id="endMsgDateId" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" id="endMsgDateId" placeholder="End Date" ng-model="endMsgDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="searchMessage()">Search</button>
+            </div>
+        </div>-->
+      </div>
+    
+    
+<div class="card-deck">
+    <div class="card mb-3" ng-controller="bluetoothConCtrl">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Bluetooth Connection Failed</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                    <th>Date</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="rec in pagedRecords[currentPage]">
+                   <td>{{rec.activity_date}}</td>
+                   <td>{{rec.activity_time}}</td>
+                </tr>
+              </tbody>
+            </table>
+              <nav class="pagination pull-right">
+                  <ul class="pagination pagination-sm flex-sm-wrap" style="margin-bottom: 0px">
+                    <li ng-class="{disabled: currentPage == 0}" class="page-item">
+                        <a href ng-click="prevPage()" class="page-link">« Prev</a>
+                    </li>
+
+                    <li ng-repeat="n in range(records.length, itemsPerPage) "
+                        ng-class="{active: n == currentPage}" class="page-item"
+                    ng-click="setPage()">
+                        <a href ng-bind="n + 1" class="page-link">1</a>
+                    </li>
+
+                    <li ng-class="{disabled: (currentPage) == Math.floor(records.length/itemsPerPage)}" class="page-item">
+                        <a href ng-click="nextPage()" class="page-link">Next »</a>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+        </div>
+        <!--<div class="card-footer small text-muted">
+            <div class="card-deck">
+                <div class="input-group date" id="bluestartDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="Start Date" ng-model="stDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-group date" id="blueendDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="End Date" ng-model="endDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="searchBluetoothConFailed()">Search</button>
+            </div>
+        </div>-->
+      </div>
+    <!--table 2-->
+    <div class="card mb-3" ng-controller="remainingBatteryCtrl">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Remaining Battery Left <button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" title="Chart" style="float: right" data-target="#remainingBatteryModal"><i class="fa fa-bar-chart"></i></button></div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                    <th>Date</th>
+                  <th>Time</th>
+                  <th>Remaining Battery(%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="rec in pagedRecords[currentPage]">
+                    <td>{{rec.activity_date}}</td>
+                    <td>{{rec.activity_time}}</td>
+                  <td>{{rec.remaining_battery}}</td>
+                </tr>
+              </tbody>
+            </table>
+              <nav class="pagination pull-right">
+                  <ul class="pagination pagination-sm flex-sm-wrap" style="margin-bottom: 0px">
+                    <li ng-class="{disabled: currentPage == 0}" class="page-item">
+                        <a href ng-click="prevPage()" class="page-link">« Prev</a>
+                    </li>
+
+                    <li ng-repeat="n in range(records.length, itemsPerPage) "
+                        ng-class="{active: n == currentPage}" class="page-item"
+                    ng-click="setPage()">
+                        <a href ng-bind="n + 1" class="page-link">1</a>
+                    </li>
+
+                    <li ng-class="{disabled: (currentPage) == Math.floor(records.length/itemsPerPage) + 1}" class="page-item">
+                        <a href ng-click="nextPage()" class="page-link">Next »</a>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+        <!--<div class="card-footer small text-muted">
+            <div class="card-deck">
+                <div class="input-group date" id="remainingstartDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="Start Date" ng-model="stDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-group date" id="remainingendDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="End Date" ng-model="endDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="searchRemainingBattery()">Search</button>
+            </div>
+        </div>-->
+        <!--Modal dialog-->
+            <div class="modal fade" tabindex="-1" role="dialog" id="remainingBatteryModal" aria-labelledby="msgModalLabel" aria-hidden="true" style="width: auto;height: auto">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="width: 800px;height: 550px">
+                  <div class="modal-header">
+                    <h6 class="modal-title">Remaining Battery</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <canvas class="chart chart-bar" chart-data="data" chart-labels="labels" 
+                    chart-colors="colors" chart-options="options"  chart-series="series" ></canvas> 
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    <!--table3-->
+    
+</div>
+<div class="card-deck">
+    <div class="card mb-3" ng-controller="wifiDiscCtrl">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Wifi Disconnected</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                    <th>Date</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="rec in pagedRecords[currentPage]">
+                   <td>{{rec.activity_date}}</td>
+                   <td>{{rec.activity_time}}</td>
+                </tr>
+              </tbody>
+            </table>
+              <nav class="pagination pull-right">
+                  <ul class="pagination pagination-sm flex-sm-wrap" style="margin-bottom: 0px">
+                    <li ng-class="{disabled: currentPage == 0}" class="page-item">
+                        <a href ng-click="prevPage()" class="page-link">« Prev</a>
+                    </li>
+
+                    <li ng-repeat="n in range(records.length, itemsPerPage) "
+                        ng-class="{active: n == currentPage}" class="page-item"
+                    ng-click="setPage()">
+                        <a href ng-bind="n + 1" class="page-link">1</a>
+                    </li>
+
+                    <li ng-class="{disabled: (currentPage) == Math.floor(records.length/itemsPerPage) + 1}" class="page-item">
+                        <a href ng-click="nextPage()" class="page-link">Next »</a>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+        <!--<div class="card-footer small text-muted">
+            <div class="card-deck">
+                <div class="input-group date" id="wifistartDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="Start Date" ng-model="stDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-group date" id="wifiendDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="End Date" ng-model="endDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="searchWifiDisc()">Search</button>
+            </div>
+        </div>-->
+      </div>
+    <!--table 3-->
+    <div class="card mb-3" ng-controller="watchDiscCtrl">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Watch Disconnected</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                    <th>Date</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="rec in pagedRecords[currentPage]">
+                   <td>{{rec.activity_date}}</td>
+                   <td>{{rec.activity_time}}</td>
+                </tr>
+              </tbody>
+            </table>
+              <nav class="pagination pull-right">
+                  <ul class="pagination pagination-sm flex-sm-wrap" style="margin-bottom: 0px">
+                    <li ng-class="{disabled: currentPage == 0}" class="page-item">
+                        <a href ng-click="prevPage()" class="page-link">« Prev</a>
+                    </li>
+
+                    <li ng-repeat="n in range(watchrecords.length, itemsPerPage) "
+                        ng-class="{active: n == currentPage}" class="page-item"
+                    ng-click="setPage()">
+                        <a href ng-bind="n + 1" class="page-link">1</a>
+                    </li>
+
+                    <li ng-class="{disabled: (currentPage) == Math.floor(watchrecords.length/itemsPerPage) + 1}" class="page-item">
+                        <a href ng-click="nextPage()" class="page-link">Next »</a>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+        <!--<div class="card-footer small text-muted">
+            <div class="card-deck">
+                <div class="input-group date" id="watchstartDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="Start Date" ng-model="stDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-group date" id="watchendDate" style="width:150px; margin-right: 5px">
+                    <input type="text" class="form-control" placeholder="End Date" ng-model="endDate">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="searchWatchDisc()">Search</button>
+            </div>
+        </div>-->
+      </div>
+    
+    
+    
+</div>
+</div>

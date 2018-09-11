@@ -1,0 +1,237 @@
+2018-07-22 21:38 -04:00: Server listening on port 8888
+2018-07-22 21:38 -04:00: Connected to MySQL
+2018-07-22 21:38 -04:00: [0mGET /auth/login [36m304 [0m13.447 ms - -[0m
+2018-07-22 21:38 -04:00: arya99155@gmail.com
+2018-07-22 21:38 -04:00: [0mPOST /auth/login [32m200 [0m134.680 ms - -[0m
+2018-07-22 21:38 -04:00: [0mGET / [36m302 [0m41.488 ms - 54[0m
+2018-07-22 21:38 -04:00: true
+2018-07-22 21:38 -04:00: [0mGET /home [32m200 [0m49.798 ms - 16564[0m
+2018-07-22 21:38 -04:00: [ RowDataPacket { username: 'Angela' },
+  RowDataPacket { username: 'Anthony' },
+  RowDataPacket { username: 'Arup' },
+  RowDataPacket { username: 'ArupKantiDey' },
+  RowDataPacket { username: 'ArupKantiDeyTest' },
+  RowDataPacket { username: 'ArupTest' },
+  RowDataPacket { username: 'ArupTestIntervention' },
+  RowDataPacket { username: 'ArupTestNewScreen' },
+  RowDataPacket { username: 'AvijitS6' },
+  RowDataPacket { username: 'AvijitSengupta' },
+  RowDataPacket { username: 'AvijitTest' },
+  RowDataPacket { username: 'AvijitTestIntervention' },
+  RowDataPacket { username: 'AvijitTestNS' },
+  RowDataPacket { username: 'BatteryTest1' },
+  RowDataPacket { username: 'DataCollectionTest' },
+  RowDataPacket { username: 'Donna06' },
+  RowDataPacket { username: 'DrBeckieNew' },
+  RowDataPacket { username: 'DrBeckieTestingNewScreens' },
+  RowDataPacket { username: 'DrBeckieUpdated' },
+  RowDataPacket { username: 'DrC' },
+  RowDataPacket { username: 'DrChellappan_Feb12_' },
+  RowDataPacket { username: 'DrKaushik' },
+  RowDataPacket { username: 'DrSriOptimizeBTestNS' },
+  RowDataPacket { username: 'DrSriramOptimizedBatteryTNS' },
+  RowDataPacket { username: 'DrSriramTNS' },
+  RowDataPacket { username: 'DrTbeckie' },
+  RowDataPacket { username: 'DrTheresa' },
+  RowDataPacket { username: 'DrTheresaBeckie' },
+  RowDataPacket { username: 'DrTheresaBTestNS' },
+  RowDataPacket { username: 'Gaby' },
+  RowDataPacket { username: 'GalaxyFive' },
+  RowDataPacket { username: 'GalaxyFiveWhite' },
+  RowDataPacket { username: 'GalaxySix' },
+  RowDataPacket { username: 'GalaxySixBlack' },
+  RowDataPacket { username: 'GalaxySixDB' },
+  RowDataPacket { username: 'GalaxySixWhite' },
+  RowDataPacket { username: 'Judy007' },
+  RowDataPacket { username: 'JudyM' },
+  RowDataPacket { username: 'JudyP2' },
+  RowDataPacket { username: 'Laura' },
+  RowDataPacket { username: 'MSGTest' },
+  RowDataPacket { username: 'Nancy' },
+  RowDataPacket { username: 'NancyWr' },
+  RowDataPacket { username: 'NewScreenTest' },
+  RowDataPacket { username: 'Rachelle' },
+  RowDataPacket { username: 'Rachelle008' },
+  RowDataPacket { username: 'ScreenTest' },
+  RowDataPacket { username: 'SireeshaCurrent ' },
+  RowDataPacket { username: 'SireeshaFullVersionTest' },
+  RowDataPacket { username: 'SireeshaModified' },
+  RowDataPacket { username: 'SireeshaNormalSensor' },
+  RowDataPacket { username: 'SireeshaOptimizeBTestNS' },
+  RowDataPacket { username: 'UserTrail' },
+  RowDataPacket { username: 'ValerieS' },
+  RowDataPacket { username: 'VenkataNormal' },
+  RowDataPacket { username: 'VenkataNoSensor' },
+  RowDataPacket { username: 'VenkataTestNewScreen' },
+  RowDataPacket { username: 'Zahar' } ]
+2018-07-22 21:38 -04:00: Fetched from DB.
+2018-07-22 21:38 -04:00: [0mGET /api/getallusernames [32m200 [0m50.477 ms - 1640[0m
+2018-07-22 21:39 -04:00: [0mGET /auth/logout [36m302 [0m2.414 ms - 66[0m
+2018-07-22 21:39 -04:00: [0mGET /auth/login [32m200 [0m2.046 ms - 1786[0m
+2018-07-23 00:35 -04:00: [0mGET / [36m302 [0m1.096 ms - 27[0m
+2018-07-23 00:43 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.466 ms - 32[0m
+2018-07-23 01:55 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.153 ms - 32[0m
+2018-07-23 01:59 -04:00: [0mGET / [36m302 [0m0.990 ms - 27[0m
+2018-07-23 02:55 -04:00: [0mGET / [36m302 [0m1.044 ms - 27[0m
+2018-07-23 02:55 -04:00: false
+2018-07-23 02:55 -04:00: [0mGET /home [36m302 [0m0.953 ms - 33[0m
+2018-07-23 02:55 -04:00: [0mGET /auth/login [32m200 [0m1.252 ms - 1786[0m
+2018-07-23 02:55 -04:00: [0mGET /index.action [33m404 [0m0.872 ms - 25[0m
+2018-07-23 05:38 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-23 05:38 -04:00: Server listening on port 8888
+2018-07-23 05:38 -04:00: Connected to MySQL
+2018-07-23 07:45 -04:00: [0mGET / [36m302 [0m9.422 ms - 27[0m
+2018-07-23 13:38 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-23 13:38 -04:00: Server listening on port 8888
+2018-07-23 13:38 -04:00: Connected to MySQL
+2018-07-23 15:16 -04:00: [0mGET / [36m302 [0m9.455 ms - 27[0m
+2018-07-23 16:06 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m2.080 ms - 32[0m
+2018-07-23 19:54 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.245 ms - 32[0m
+2018-07-23 21:38 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-23 21:39 -04:00: Server listening on port 8888
+2018-07-23 21:39 -04:00: Connected to MySQL
+2018-07-23 22:11 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m9.169 ms - 32[0m
+2018-07-24 04:40 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.484 ms - 32[0m
+2018-07-24 05:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-24 05:39 -04:00: Server listening on port 8888
+2018-07-24 05:39 -04:00: Connected to MySQL
+2018-07-24 07:54 -04:00: [0mGET / [36m302 [0m9.468 ms - 27[0m
+2018-07-24 08:23 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m2.060 ms - 32[0m
+2018-07-24 08:24 -04:00: [0mGET / [36m302 [0m2.194 ms - 27[0m
+2018-07-24 10:46 -04:00: [0mGET / [36m302 [0m0.910 ms - 27[0m
+2018-07-24 12:05 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.170 ms - 32[0m
+2018-07-24 12:09 -04:00: [0mGET / [36m302 [0m0.897 ms - 27[0m
+2018-07-24 13:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-24 13:39 -04:00: Server listening on port 8888
+2018-07-24 13:39 -04:00: Connected to MySQL
+2018-07-24 14:53 -04:00: [0mGET / [36m302 [0m9.463 ms - 27[0m
+2018-07-24 15:42 -04:00: [0mGET / [36m302 [0m1.963 ms - 27[0m
+2018-07-24 18:09 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.886 ms - 32[0m
+2018-07-24 19:52 -04:00: [0mGET / [36m302 [0m0.945 ms - 27[0m
+2018-07-24 21:35 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.106 ms - 32[0m
+2018-07-24 21:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-24 21:39 -04:00: Server listening on port 8888
+2018-07-24 21:39 -04:00: Connected to MySQL
+2018-07-25 01:11 -04:00: [0mGET / [36m302 [0m9.492 ms - 27[0m
+2018-07-25 01:12 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m2.046 ms - 32[0m
+2018-07-25 05:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-25 05:39 -04:00: Server listening on port 8888
+2018-07-25 05:39 -04:00: Connected to MySQL
+2018-07-25 06:35 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m9.111 ms - 32[0m
+2018-07-25 09:41 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.492 ms - 32[0m
+2018-07-25 10:21 -04:00: [0mGET / [36m302 [0m2.340 ms - 27[0m
+2018-07-25 13:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-25 13:39 -04:00: Server listening on port 8888
+2018-07-25 13:39 -04:00: Connected to MySQL
+2018-07-25 14:27 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m9.072 ms - 32[0m
+2018-07-25 17:44 -04:00: [0mGET http://dx.doi.org/ [36m302 [0m3.465 ms - 27[0m
+2018-07-25 18:20 -04:00: [0mGET / [36m302 [0m1.255 ms - 27[0m
+2018-07-25 21:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-25 21:39 -04:00: Server listening on port 8888
+2018-07-25 21:39 -04:00: Connected to MySQL
+2018-07-25 21:44 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m9.111 ms - 32[0m
+2018-07-25 23:44 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.463 ms - 32[0m
+2018-07-26 01:10 -04:00: [0mGET http://dx.doi.org/ [36m302 [0m3.209 ms - 27[0m
+2018-07-26 04:27 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m0.956 ms - 32[0m
+2018-07-26 05:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-26 05:39 -04:00: Server listening on port 8888
+2018-07-26 05:39 -04:00: Connected to MySQL
+2018-07-26 07:01 -04:00: [0mGET / [36m302 [0m10.363 ms - 27[0m
+2018-07-26 07:01 -04:00: false
+2018-07-26 07:01 -04:00: [0mGET /home [36m302 [0m1.830 ms - 33[0m
+2018-07-26 07:01 -04:00: [0mGET /auth/login [32m200 [0m4.702 ms - 1786[0m
+2018-07-26 07:01 -04:00: [0mGET /index.action [33m404 [0m1.509 ms - 25[0m
+2018-07-26 08:15 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.145 ms - 32[0m
+2018-07-26 09:29 -04:00: [0mGET /manager/html [33m404 [0m0.964 ms - 25[0m
+2018-07-26 13:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-26 13:39 -04:00: Server listening on port 8888
+2018-07-26 13:39 -04:00: Connected to MySQL
+2018-07-26 14:12 -04:00: [0mGET / [36m302 [0m9.443 ms - 27[0m
+2018-07-26 14:43 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m2.087 ms - 32[0m
+2018-07-26 18:52 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.278 ms - 32[0m
+2018-07-26 21:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-26 21:39 -04:00: Server listening on port 8888
+2018-07-26 21:39 -04:00: Connected to MySQL
+2018-07-26 22:04 -04:00: [0mGET / [36m302 [0m9.505 ms - 27[0m
+2018-07-26 23:31 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m2.089 ms - 32[0m
+2018-07-27 00:51 -04:00: [0mGET / [36m302 [0m1.259 ms - 27[0m
+2018-07-27 04:39 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.146 ms - 32[0m
+2018-07-27 05:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-27 05:39 -04:00: Server listening on port 8888
+2018-07-27 05:39 -04:00: Connected to MySQL
+2018-07-27 07:33 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m9.117 ms - 32[0m
+2018-07-27 10:34 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m1.483 ms - 32[0m
+2018-07-27 13:39 -04:00: Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:113:13)
+    at Socket.<anonymous> (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:109:28)
+    at Socket.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-27 13:39 -04:00: Server listening on port 8888
+2018-07-27 13:39 -04:00: Connected to MySQL
+2018-07-27 16:07 -04:00: [0mGET /v1/wallet/list_keys [33m404 [0m9.114 ms - 32[0m
