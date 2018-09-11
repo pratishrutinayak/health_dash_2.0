@@ -1,0 +1,149 @@
+<!-- <link href="../vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+<link href="../vendor/bootstrap4/css/bootstrap-grid.min.css" rel="stylesheet">
+<link href="../vendor/bootstrap4/css/bootstrap-reboot.min.css" rel="stylesheet"> -->
+<!-- Custom Fonts -->
+<!-- <link href="../vendor/font-awesome/css/fontawesome-all.css" rel="stylesheet" type="text/css"> -->
+<style>
+    .container {
+    max-width: 100%!important;
+    }
+    .chat-head{
+        width:100%;
+        padding: 10px 20px;
+        margin:2px;
+        border-radius: 5px;
+        background-color: #2c3dd18a;
+        font-size: 12px;
+    }
+    .chat-head:hover{
+        background-color: #2c3dd1b9;
+    }
+    .chat-head:active{
+        background-color: #2a35ca;
+    }
+    .chatAreaWrapper{
+        /* position:relative;
+        height:60vh;
+        left:0;
+        right:0; */
+        position: relative;
+        height: 50vh;
+    }
+    .chatArea {
+        overflow-y: auto;
+        position : absolute;
+        left:0;
+        right:0;
+        overflow:auto;
+        top:0;
+        bottom:0;
+        /* padding: 5px;
+        height: 50vh;
+        overflow-y: auto;
+        position: absolute;
+        left: 0;
+        top: 0; */
+    }
+
+    .chat{
+        width:90%;
+        border: #818181;
+        border-radius: 10px;
+        position: relative;
+        padding:10px;
+        margin:10px;
+        font-size:15px;
+        vertical-align: center;
+        /* display:block; */
+    }
+
+    .chat_input{
+        width: 65%;
+        float: right;
+        border: #818181;
+        border-radius: 10px;
+        position: relative;
+        padding:10px;
+        padding-right:60px;
+        margin:5px 5px 5px 30%;
+        font-size:15px;
+        vertical-align: center;
+        border: blue 1px solid;
+        /* display:block; */
+    }
+
+    .received{
+        background-color: lightgrey;
+        float:left;
+        margin-left:10px;
+        margin-right:60px;
+    }
+    .sent{
+        background-color: lightskyblue;
+        float:right;
+        text-align: right;
+        margin-right:10px;
+        margin-left:60px;
+    }
+
+    .sent:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 0.5em solid transparent;
+        border-left-color: lightblue;
+        border-right: 0;
+        margin-top: -0.5em;
+        margin-right: -0.5em;
+    }
+    .received:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 0.5em solid transparent;
+        border-right-color: lightgrey;
+        border-left: 0;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+</style>
+<div class="container" ng-controller="messaging">
+    <div class="card" style="box-shadow: 1px 1px 50px silver; ">
+        <div class="card-header">
+            Chat Messages <span class="badge badge-info" style="font-size:16px;">{{messageCount}}</span>
+            <button class="btn btn-primary float-right" ng-click="refresh(username);"><i class="fa fa-refresh"></i></button>
+        </div>
+        <div class="card-body">
+            <div class="row" style="height: 60vh;">
+                <div class="col-3" style="border: black 1px solid; overflow-y: scroll;"> 
+                    <input type="text" ng-model="searchedName" style="width:100%; border-radius: 5px; padding:5px; margin:5px;" placeholder="Search name">
+                    <div ng-repeat="x in app_users | filter : searchedName | orderBy : 'full_name'">
+                        <button class="chat-head" ng-click="refresh(x.username);">{{x.full_name}} </button>  
+                    </div>
+                </div>                      
+                <div id="myChat" class="col-9" style="border: black 1px solid; overflow-y: scroll;">
+                    <div ng-class="(msg.sender===current_user?'chat sent':'chat received')" ng-repeat="msg in messages">
+                        {{msg.message}}
+                        <br>
+                        <sub><a data-toggle="tooltip" data-placement="bottom" title="Read at {{(msg.read_time != null)?(msg.read_time | date : 'MMM dd yyyy hh:mm:ss a'):'none'}}">
+                            <i ng-class="(msg.read_time != null)?'fa fa-check-square':'fa fa-check-square-o'" ng-show="((msg.sender==current_user)?true:false)"></i>
+                        </a> {{msg.sent_time | date: 'MMM dd yyyy hh:mm:ss a'}}</sub>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <form class="form-inline" ng-submit="sendMessage();">
+                <input type="text" ng-model="message" class="chat_input" placeholder="Type message...">
+                <button class="btn btn-primary" type="submit" style="margin-left: -55px; z-index: 1;"><i class="fa fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+</div>

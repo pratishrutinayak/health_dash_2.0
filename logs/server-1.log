@@ -1,0 +1,97 @@
+2018-07-22 21:14 -04:00: Server listening on port 8888
+2018-07-22 21:14 -04:00: { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1194:14)
+    --------------------
+    at Protocol._enqueue (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at Protocol.handshake (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+    at Connection.connect (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:130:18)
+    at Object.<anonymous> (/home/cis1024/HealthDashboard/dev_test/database/db.js:9:12)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+    at Module.require (module.js:604:17)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+2018-07-22 21:19 -04:00: [0mGET / [36m302 [0m14.061 ms - 54[0m
+2018-07-22 21:19 -04:00: false
+2018-07-22 21:19 -04:00: [0mGET /home [36m302 [0m3.035 ms - 66[0m
+2018-07-22 21:19 -04:00: [0mGET /auth/login [36m304 [0m3.307 ms - -[0m
+2018-07-22 21:19 -04:00: [0mGET /favicon.ico [33m404 [0m2.120 ms - 24[0m
+2018-07-22 21:19 -04:00: arya99155@gmail.com
+2018-07-22 21:19 -04:00: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:201:16)
+    at Protocol._enqueue (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:139:13)
+    at Connection.query (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/cis1024/HealthDashboard/dev_test/routes/auth.js:139:9
+    at Layer.handle [as handle_request] (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/layer.js:76:5)
+    at next (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/route.js:100:13)
+    at Route.dispatch (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/route.js:81:3)
+    at Layer.handle [as handle_request] (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/layer.js:76:5)
+    at /home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/index.js:227:24
+    at Function.proto.process_params (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/index.js:305:12)
+2018-07-22 21:19 -04:00: Server listening on port 8888
+2018-07-22 21:19 -04:00: { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1194:14)
+    --------------------
+    at Protocol._enqueue (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at Protocol.handshake (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+    at Connection.connect (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:130:18)
+    at Object.<anonymous> (/home/cis1024/HealthDashboard/dev_test/database/db.js:9:12)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+    at Module.require (module.js:604:17)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+2018-07-22 21:19 -04:00: arya99155@gmail.com
+2018-07-22 21:19 -04:00: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:201:16)
+    at Protocol._enqueue (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:139:13)
+    at Connection.query (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/cis1024/HealthDashboard/dev_test/routes/auth.js:139:9
+    at Layer.handle [as handle_request] (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/layer.js:76:5)
+    at next (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/route.js:100:13)
+    at Route.dispatch (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/route.js:81:3)
+    at Layer.handle [as handle_request] (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/layer.js:76:5)
+    at /home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/index.js:227:24
+    at Function.proto.process_params (/home/cis1024/HealthDashboard/dev_test/node_modules/express/lib/router/index.js:305:12)
+2018-07-22 21:19 -04:00: Server listening on port 8888
+2018-07-22 21:19 -04:00: { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1194:14)
+    --------------------
+    at Protocol._enqueue (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at Protocol.handshake (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+    at Connection.connect (/home/cis1024/HealthDashboard/dev_test/node_modules/mysql/lib/Connection.js:130:18)
+    at Object.<anonymous> (/home/cis1024/HealthDashboard/dev_test/database/db.js:9:12)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+    at Module.require (module.js:604:17)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+2018-07-22 21:19 -04:00: [0mGET /vendor/bootstrap/js/bootstrap.bundle.min.js.map [33m404 [0m20.030 ms - 60[0m
+2018-07-22 21:19 -04:00: [0mGET /vendor/bootstrap/css/bootstrap.min.css.map [33m404 [0m3.733 ms - 55[0m
