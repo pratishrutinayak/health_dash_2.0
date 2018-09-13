@@ -22,16 +22,19 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top" ng-controller="mainCtrl">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Herbeat App</a>
+    <a class="navbar-brand" href="/">Herbeat App</a>
+    <button class="btn btn-dark float-right" id="notificationBell">
+      <a href="#/patientMessages" style="text-decoration:none;">
+        <i class="fa fa-bell-o" style="font-size:30px;"></i>
+      </a>
+    </button> 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <div style="display: block;width: 100%">
             <div class="btn-group" style="display: block;float: right;">
-                <button class="btn btn-dark" id="notificationBell" data-toggle="dropdown">
-                  <i class="fa fa-bell-o" style="font-size:30px;"></i>
-                </button> 
+                
                 <i class="fa fa-user-o" aria-hidden="true" style="color:#efefef; margin-right: 10px"></i>
                 <strong style="color:#efefef; margin-right: 10px" ng-bind-html="user"></strong>
                 <a href="/auth/logout" style="color: #efefef; text-decoration: none">
@@ -60,7 +63,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Chat Messages">
-          <a class="nav-link" href="#/patientMessages">
+          <a id="chat-menu" class="nav-link" href="#/patientMessages">
             <i class="fa fa-comments"></i>
             <span class="nav-link-text">Chat Messages</span>
           </a>
@@ -320,7 +323,7 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    
+    <script src="http://localhost:8888/socket.io/socket.io.js"></script>
     <script src="vendor/datatables/jquery.dataTables.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->

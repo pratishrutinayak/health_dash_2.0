@@ -53,7 +53,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: { 
       secure: false, 
-      maxAge: 7200000
+      maxAge: 7200000 // 2 hours
     }
 }));
 app.use(passport.initialize());
@@ -83,5 +83,20 @@ passport.use(new LocalStrategy(
   }
 ));
 
-app.listen(port);
-console.log("Server listening on port " + port);
+// socket.io
+var server = require('http').Server(app);
+var socket = require('socket.io');
+var io = socket(server);
+
+
+io.on('connection', function (sock) {
+    console.log("Socket added to health coach socket.io.",sock);
+    sock.on('sent message', function (data) {
+      console.log('Received a message from : ',data.user);
+      sock.broadcast.emit('received message', { user: data.user });
+    });
+});
+
+server.listen(process.env.PORT || 8888);
+
+console.log("Node and socket.io server listening on port " + process.env.PORT || 8888);

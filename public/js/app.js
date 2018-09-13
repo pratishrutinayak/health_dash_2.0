@@ -1,3 +1,6 @@
+var socket = io.connect('http://localhost:8889/');
+var local_socket = io.connect('http://localhost:8888/');
+console.log(socket, local_socket);
 angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
   // Optional configuration
   .config(['ChartJsProvider', '$routeProvider', '$httpProvider', function (ChartJsProvider, $routeProvider, $httpProvider) {
@@ -3254,23 +3257,42 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
             .error(function(error){
                 console.log('Error', error)
             });
-            $http({
-                url:"http://131.247.16.242:8889/api/checkmessages",
-                method:'POST',
-                params:{username:$scope.user}
-            })
-            .success(function(data){
-                    // $scope.messages = data;
-                    // $scope.message = '';
-                    // chat();
-                    // updateScroll($scope.message_count*80);
-                    console.log("Message sent and receiver notified.")
-            })
-            .error(function(error){
-                console.log('Error', error)
-            });
+            // $http({
+            //     url:"http://localhost:8889/api/checkmessages",
+            //     method:'POST',
+            //     params:{username:$scope.user}
+            // })
+            // .success(function(data){
+            //         // $scope.messages = data;
+            //         // $scope.message = '';
+            //         // chat();
+            //         // updateScroll($scope.message_count*80);
+            //         console.log("Message sent and receiver notified.")
+            // })
+            // .error(function(error){
+            //     console.log('Error', error)
+            // });
+
+
+            //Send a ping to patient socket server
+            socket.emit('sent message', { user: "Vijay" });
+
+            // when a message is received from patient
+            
         }
     }
     // setInterval(chat,3000);
     chat();
+});
+local_socket.on('received message', function (data) {
+    console.log('Received message from patient : ',data.user);
+    $('#notificationBell').addClass('notification');
+    setTimeout(function(){$('#refresh').click()},500);
+});
+$('#notificationBell').on('click', function(){
+    $('#notificationBell').removeClass('notification');
+})
+
+$('#chat-menu').on('click',function(){
+    $('#notificationBell').removeClass("notification");
 });

@@ -3,6 +3,9 @@ var conn = require('../database/db');
 var express = require('express');
 var app = express.Router();
 
+
+
+
 //API for patient messages
     app.post('/sentpmessage', function(req, res) {
         if(req.body.sender !== null && req.body.message !== null)
@@ -521,8 +524,8 @@ var app = express.Router();
             else
             {   
                 res.send(result);
-                console.log(result);
-                console.log('Fetched chat messages.');
+                // console.log(result);
+                // console.log('Fetched chat messages.');
             }
         });
         conn.query('UPDATE chat_messages SET read_time = CURRENT_TIMESTAMP() WHERE receiver = ?;',
@@ -541,8 +544,8 @@ var app = express.Router();
             else
             {
                 res.json(result);
-                console.log(result);
-                console.log('Searched chats from chats table.');
+                // console.log(result);
+                // console.log('Searched chats from chats table.');
             }
         });
     });
@@ -557,13 +560,14 @@ var app = express.Router();
             else
             {   
                 res.send(result);
-                console.log(result);
-                console.log('Get all patients name in users table.');
+                // console.log(result);
+                // console.log('Get all patients name in users table.');
             }
         });
     });
-    app.get('/checkmessages', function(req,res){
-        res.redirect('/api/getchatmessges?sender='+req.sender+'&receiver='+req.receiver);
-    });
+    // app.get('/checkmessages', function(req,res){
+    //     // res.redirect('/api/getchatmessges?sender='+req.sender+'&receiver='+req.receiver);
+    //     console.log('message called from other user...');
+    // });
 
 module.exports = app;
