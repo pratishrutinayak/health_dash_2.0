@@ -3275,7 +3275,7 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
 
 
             //Send a ping to patient socket server
-            socket.emit('sent message', { user: "Vijay" });
+            socket.emit('sent message', { user: $scope.user });
 
             // when a message is received from patient
             
@@ -3287,6 +3287,7 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
 local_socket.on('received message', function (data) {
     console.log('Received message from patient : ',data.user);
     $('#notificationBell').addClass('notification');
+    
     setTimeout(function(){$('#refresh').click()},500);
 });
 $('#notificationBell').on('click', function(){
