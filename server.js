@@ -90,7 +90,7 @@ var io = socket(server);
 
 
 io.on('connection', function (sock) {
-    console.log("Socket added to health coach socket.io.",sock);
+    console.log("Socket added to health coach socket.io .");
     sock.on('sent message', function (data) {
       console.log('Received a message from : ',data.user);
       sock.broadcast.emit('received message', { user: data.user });
