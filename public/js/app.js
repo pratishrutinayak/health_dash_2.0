@@ -31,7 +31,6 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
     // Configure all charts
     
   }]).controller("mainCtrl", ['$rootScope', '$scope', '$http', '$cookies', function ($rootScope, $scope, $http, $cookies) {
-      
         $scope.user = $cookies.get("username");
         $scope.current_user = $cookies.get("username"); //temporary username saved 
         //changes for date range search
@@ -3235,6 +3234,7 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
                 if($scope.username!=""){
                     $scope.messages = $filter('filter')(data,$scope.username, true);
                 } 
+                socket.emit('read message', { user:$scope.username});
             }
         })
         .error(function(error){
@@ -3287,9 +3287,17 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
 local_socket.on('received message', function (data) {
     console.log('Received message from patient : ',data.user);
     $('#notificationBell').addClass('notification');
-    
     setTimeout(function(){$('#refresh').click()},500);
 });
+
+// local_socket.on('refresh message', function (data) {
+//     console.log('Message read by  patient: ',data.data2);
+//     // $('#notificationBell').addClass('notification');
+//     // $('#tooltipMessage').html(data.user+' sent you a message.');
+//     // displayNotification(data.data2+' sent you a message.');
+//     setTimeout(function(){$('#refresh').click()},500);
+
+// });
 $('#notificationBell').on('click', function(){
     $('#notificationBell').removeClass('notification');
 })

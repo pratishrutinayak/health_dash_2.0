@@ -254,10 +254,10 @@
   </nav>
   <div class="content-wrapper">
       <div class="container-fluid">
-          <select  class="custom-select" ng-model="username" ng-options="user.username for user in users">
+          <select class="custom-select" ng-model="username" ng-options="user.username for user in users">
               <option value="" selected>-- select patient ID --</option>
           </select>
-          <div class="card-deck" style="display:inline-flex; margin-left: 10px">
+          <div  class="card-deck" style="display:inline-flex; margin-left: 10px">
                 <div class="input-group date" id="startDate" style="width:150px; margin-right: 5px">
                     <input type="text" class="form-control" placeholder="Start Date" ng-model="startDate" ng-disabled="welcomeVisible">
                     <span class="input-group-addon">
@@ -269,7 +269,7 @@
                         <i class="fa fa-calendar" aria-hidden="true"></i></span>
                 </div>
                 <button type="button" class="btn btn-primary" ng-click="searchByDate()" ng-disabled="welcomeVisible">Search</button>
-            </div>
+          </div>
           <button ng-disabled="welcomeVisible" id="sendMsg" type="button" class="btn btn-info" data-toggle="modal" data-target="#msgModal" style="float:right">Send Message</button>
           <!--Modal dialog-->
           <div class="modal fade" tabindex="-1" role="dialog" id="msgModal" aria-labelledby="msgModalLabel" aria-hidden="true">
