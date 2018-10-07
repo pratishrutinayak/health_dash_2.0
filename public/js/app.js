@@ -3195,10 +3195,8 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
     $scope.username = "";
     $scope.messages = [];
     $scope.user = $cookies.get("username"); //The person sending the messages
-    function updateScroll(c){
-        // var element = document.getElementById("myChat");
-        // element.scrollTop = c;
-        $("#myChat").animate({scrollTop: c},500);
+    function updateScroll(){
+        $("#myChat").animate({scrollTop: $("#myChat")[0].scrollHeight},500);
     }
     
     $scope.refresh = function(user){
@@ -3207,7 +3205,7 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
         chat();
     }
     var chat = function(){
-        updateScroll($scope.message_count*80);
+        updateScroll();
         $http({
             url:"/api/getallusers",
             method:'GET',
@@ -3216,7 +3214,7 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
             if(data.length){
                 $scope.app_users = data;
                 $scope.message_count = $scope.messages.length;
-                updateScroll($scope.message_count*80);
+                updateScroll();
             }
         })
         .error(function(error){
@@ -3252,7 +3250,7 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
                     // $scope.messages = data;
                     $scope.message = '';
                     chat();
-                    updateScroll($scope.message_count*80);
+                    updateScroll();
             })
             .error(function(error){
                 console.log('Error', error)
@@ -3266,7 +3264,7 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
             //         // $scope.messages = data;
             //         // $scope.message = '';
             //         // chat();
-            //         // updateScroll($scope.message_count*80);
+            //         // updateScroll();
             //         console.log("Message sent and receiver notified.")
             // })
             // .error(function(error){
@@ -3275,13 +3273,13 @@ angular.module("app", ['chart.js', 'ngRoute', 'ngCookies', 'ngSanitize'])
 
 
             //Send a ping to patient socket server
-            socket.emit('sent message', { user: $scope.user });
+            socket.emit('sent message', { user: $scope.user, message: $scope.message });
 
             // when a message is received from patient
             
         }
     }
-    // setInterval(chat,3000);
+    setTimeout(updateScroll(),200);
     chat();
 });
 local_socket.on('received message', function (data) {
